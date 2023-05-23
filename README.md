@@ -18,3 +18,6 @@ API de calculo do CDB desenvolvida com .NET Core e Angular
 ## 2. Na Solution explorer do Visual Studio selecione CalculadoraCDB como Startup project e rode o projeto
 
 ## 3. Projeto funcionando!
+
+
+Obs: Necessário ter Visual Studio e o Node.Js instalado na máquina.
