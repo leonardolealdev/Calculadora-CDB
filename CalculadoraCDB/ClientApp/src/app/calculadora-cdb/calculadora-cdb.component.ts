@@ -43,12 +43,12 @@ export class CalculadoraCdbComponent {
   }
 
   camposValidos(): boolean {
-    if (this.prazo < 1) {
+    if (this.prazo <= 1) {
       this.toastr.warning("Prazo deve ser maior que 1");
       return false;
     }
 
-    if (this.valor < 0) {
+    if (this.valor <= 0) {
       this.toastr.warning("Valor deve ser positivo");
       return false;
     }
