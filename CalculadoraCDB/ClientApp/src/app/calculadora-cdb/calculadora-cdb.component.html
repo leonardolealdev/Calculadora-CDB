@@ -1,0 +1,24 @@
+<div class="container my-5">
+  <div class="row justify-content-center align-items-center">
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <h2>Cálculo do CDB</h2>
+      <form (ngSubmit)="calcularCDB()">
+        <div class="form-group">
+          <label for="valor">Valor Monetário:</label>
+          <input type="number" class="form-control" id="valor" [(ngModel)]="valor" name="valor" required>
+        </div>
+        <div class="form-group">
+          <label for="prazo">Prazo em Meses:</label>
+          <input type="text" class="form-control" id="prazo" [(ngModel)]="prazo" name="prazo" min="2" onkeyup="onlyNumbers(this)" required>
+        </div>
+        <button type="submit" class="btn btn-primary my-2">Calcular</button>
+      </form>
+
+      <div class="result" *ngIf="resultadoBruto && resultadoLiquido">
+        <h3>Resultados:</h3>
+        <p>Resultado Bruto: {{ resultadoBruto | currency }}</p>
+        <p>Resultado Líquido: {{ resultadoLiquido | currency }}</p>
+      </div>
+    </div>
+  </div>
+</div>
